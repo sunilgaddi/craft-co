@@ -1,0 +1,152 @@
+header{
+    position: fixed;
+    display: block;
+    width:100%;
+    min-width: 300px;
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+    background-color: rgb(79, 53, 112);
+
+    padding: 8px 120px;
+
+    z-index: 100;
+    
+}
+
+.company__name a{
+    color:white;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+nav{
+    display: flex
+}
+
+
+
+.outer__nav__links{
+    position: relative;
+    display: flex;
+    gap:2rem;
+}
+
+.outer__nav__links li{
+    color:white;
+    cursor: pointer;
+}
+
+
+.inner__nav__links{
+    position: absolute;
+    top:2rem;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction:column ;
+    gap:15px;
+
+    padding:15px 25px;
+    border-radius:0.3rem;
+    box-shadow: 0 0 1px rgb(151, 151, 151);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    z-index:101;
+}
+
+.outer__nav__links li:hover ul{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.inner__nav__links li{
+    font-size: 0.95rem;
+    font-weight: 400;
+    color:rgb(87, 81, 81);
+}
+
+.inner__nav__links li a{
+    text-decoration: none;
+}
+
+.menu__box{
+    display:none;
+}
+
+.menu__box img{
+    display: block;
+    width:100%;
+}
+
+
+@media only screen and (max-width:900px){
+    header{
+        padding:8px 30px;
+    }
+
+    .company__name a{
+        font-size: 2.2rem;
+    }
+
+    .outer__nav__links{
+        position: absolute;
+        width:300px;
+        height:100vh;
+        top:0;
+        right:0;
+        transform:translateX(100%) ;
+
+        padding:100px 20px;
+        flex-direction: column;   
+        background-color: white;
+        
+        transition: 0.5s ease-in-out;
+         
+    }
+
+    .outer__nav__links li{
+        color:black;
+    }
+
+    .inner__nav__links{
+        display: none;
+    }
+
+    .outer__nav__links li:hover ul{
+        display: block;
+        position: relative;
+        top:1rem;
+    
+        display: flex;
+        flex-direction:column ;
+        gap:15px;
+  
+    }
+
+    .menu__box{
+        display: block;
+        width:23px;
+        height:23px;
+        z-index: 100;
+        
+    }
+
+    .active{
+        transform: translateX(0%);
+        box-shadow: 0 10px 50px  rgba(0, 0, 0,0.6);
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .company__name a{
+        font-size: 1.7rem;
+    }
+}

@@ -1,0 +1,233 @@
+.homepage__section{
+    position: relative;
+    width:100vw;
+    height:auto;
+    min-height:100vh;
+    padding-top:70px;
+    background-color:rgb(255, 255, 255);
+    min-width:300px;
+}
+
+.learnmore__section{
+    position: relative;
+    height:85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+
+
+.learnmore__description{
+    font-size: clamp(.6rem,2.5vw,1.05rem);
+    font-weight:600;
+    color:rgb(98, 77, 124);
+    line-height: 1.5;
+}
+
+.learnmore__btn{
+    padding:12px 40px;
+    background-color:rgb(122, 87, 168) ;
+    border-radius:5px;
+
+    font-size: 1.1rem;
+    font-weight:500;
+    color:white;
+}
+
+.banner{
+    position: relative;
+    width:100%;
+    height:450px;
+    background-image: url('../../banner2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::after{
+    content: "";
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: rgba(117, 79, 148, 0.7);
+}
+
+.banner__content
+{
+    text-align: center;
+    z-index:10;
+}
+
+.banner__heading{
+    font-size: clamp(1.1rem,6vw,2.2rem);
+    font-weight: 700;
+    color:white;
+    margin-bottom:30px;
+}
+
+.banner__description{
+    font-size: clamp(.6rem,4vw,1.5rem);
+    color:white;
+    margin-bottom: 80px;
+}
+
+.banner__btn{
+    padding:20px 23px;
+    font-weight: 400;
+    color:white;
+    background-color:rgb(123, 72, 190) ;
+    border-radius:5px;
+}
+
+.section2{
+    position: relative;
+    height:auto;
+    width:100%;
+    background-color: rgb(243, 243, 243);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap:70px;
+    padding:100px 0;
+
+}
+
+.left__heading{
+    font-size: clamp(1.2rem,3vw,1.6rem);
+    color:rgb(68, 65, 65);
+    margin-bottom:20px;
+}
+
+.left__desc{
+    font-size: clamp(.7rem,2vw,1.05rem);
+    color:rgb(110, 103, 103);
+}
+
+
+
+.right__section{
+    position: relative;
+    width:400px;
+    background-color: white;
+    box-shadow: 0 0 5px rgb(185, 179, 179);
+    border-radius: 5px;
+}
+
+.right__section p {
+    font-size: 0.8rem;
+    font-weight:600;
+    color:rgb(119, 80, 151);
+    text-align: center;
+    padding: 10px 0;
+
+}
+
+
+.right__box{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    border-top:1px solid rgb(216, 216, 216);
+}
+
+
+.right__box ul li{
+    padding:17px 0;
+    font-size: clamp(0.7rem, 2vw,0.9rem);
+    font-weight: 500;
+    color:rgb(99, 95, 95);
+    background-size:10px;
+}
+
+
+.right__box ul li::before{
+    content: '';
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-size: cover;
+    background-image: url('../../tick.png');
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    background-position: center center;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width:800px){
+    .learnmore__btn{
+        padding:13px 28px;
+        font-size: .9rem;
+    }
+    .banner__btn{
+        padding:18px 20px;
+    }
+    
+}
+
+@media only screen and (max-width:910px) {
+    .section2__content{
+        flex-direction: column;
+        gap:50px;
+        padding: 80px  0;
+    }
+}
+
+@media only screen and (max-width:560px){
+    .learnmore__section{
+        gap:30px;
+    }
+    .learnmore__btn{
+        padding:10px 20px;
+        font-size: .7rem;
+    }
+    .banner__btn{
+        padding:14px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+@media only screen and (max-width:430px){
+    .learnmore__section{
+        gap:15px;
+    }
+    .learnmore__btn{
+        padding:8px 11px;
+        font-size: .7rem;
+    }
+    .banner__btn{
+        padding:10px 17px;
+        font-size: 0.8rem;
+    }
+    .right__section{
+        position: relative;
+        width:290px;
+        background-color: white;
+        box-shadow: 0 0 5px rgb(185, 179, 179);
+        border-radius: 5px;
+    }
+    .right__box{
+        gap:5px;
+    }
+    
+    
+}
