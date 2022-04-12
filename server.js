@@ -11,6 +11,6 @@ app.use(express.static(path.join(__dirname,'client/build')))
 app.use('/search', require('./routes/routes'))
 
 
-app.listen(8080, ()=> {
+app.listen(8000, ()=> {
     console.log("Server Running on Port 8080")
 })
